@@ -68,60 +68,7 @@ function Header() {
 										</li>
 
 										<li className="menu-dropdown">
-											<a href="#">FAQ</a>
-											<ul className="main-sub-menu">
-												<li className="menu-dropdown position-static">
-													<a href="#">
-														Blog Grid <i className="fa fa-angle-right"></i>
-													</a>
-													<ul className="main-sub-menu main-sub-menu-2">
-														<li>
-															<a href="blog-grid-left-sidebar.html">
-																Blog Grid Left Sidebar
-															</a>
-														</li>
-														<li>
-															<a href="blog-grid-right-sidebar.html">
-																Blog Grid Right Sidebar
-															</a>
-														</li>
-													</ul>
-												</li>
-												<li className="menu-dropdown position-static">
-													<a href="#">
-														Blog List <i className="fa fa-angle-right"></i>
-													</a>
-													<ul className="main-sub-menu main-sub-menu-2">
-														<li>
-															<a href="blog-list-left-sidebar.html">
-																Blog List Left Sidebar
-															</a>
-														</li>
-														<li>
-															<a href="blog-list-right-sidebar.html">
-																Blog List Right Sidebar
-															</a>
-														</li>
-													</ul>
-												</li>
-												<li className="menu-dropdown position-static">
-													<a href="#">
-														Blog Single <i className="fa fa-angle-right"></i>
-													</a>
-													<ul className="main-sub-menu main-sub-menu-2">
-														<li>
-															<a href="blog-single-left-sidebar.html">
-																Blog Single Left Sidebar
-															</a>
-														</li>
-														<li>
-															<a href="blog-single-right-sidebar.html">
-																Blog Single Right Sidbar
-															</a>
-														</li>
-													</ul>
-												</li>
-											</ul>
+											<Link href="/faq">FAQ</Link>
 										</li>
 										<li>
 											<Link href="/contact">Contact</Link>

@@ -2,6 +2,12 @@ import Layout from "@/layout";
 import React from "react";
 
 function DonatePage() {
+	const [dedication, setDedication] = React.useState("");
+	const [amount, setAmount] = React.useState(0);
+	const [currency, setCurrency] = React.useState("USD");
+
+	const handleSubmit = () => {};
+
 	return (
 		<Layout>
 			<div className="my-24">
@@ -15,14 +21,32 @@ function DonatePage() {
 					<div className="justify-center max-w-sm mx-auto flex flex-col gap-4">
 						<input
 							type="number"
+							value={amount}
+							onChange={(e) => setAmount(parseInt(e.target.value))}
 							placeholder="Enter your pledged donation"
 							className="input input-bordered border mt-4 input-primary w-full"
 						/>
+						<select
+							onChange={(e) => setCurrency(e.target.value)}
+							value={currency}
+							className="select border  w-full text-gray-600"
+						>
+							<option disabled selected>
+								Currency
+							</option>
+							<option value="USD">USD</option>
+							<option value="EUR">EUR</option>
+						</select>
 						<textarea
 							className="textarea h-40 border resize-none"
 							placeholder="Dedication"
+							value={dedication}
+							onChange={(e) => setDedication(e.target.value)}
 						></textarea>
-						<button className="text-white bg-redPrimary px-4 py-2 rounded-md font-bold">
+						<button
+							onClick={() => handleSubmit()}
+							className="text-white bg-redPrimary px-4 py-2 rounded-md font-bold"
+						>
 							Donate
 						</button>
 					</div>

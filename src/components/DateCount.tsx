@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function DateCount() {
-	const finishDate = new Date("May 29, 2023 00:00:00").getTime();
+	const finishDate = new Date("May 27, 2023 16:00:00").getTime();
 
 	const [days, setDays] = useState(0);
 	const [hours, setHours] = useState(0);
@@ -24,18 +24,15 @@ function DateCount() {
 
 	return (
 		<div>
-			<div
-				className="countdown d-flex text-white text-sm gap-12 justify-content-center"
-				data-countdown="2021/01/01"
-			>
-				<div className="countdown-item border p-2 w-20">
-					<div className="countdown-number flex flex-col gap-1 items-center">
-						<span className="days text-3xl">{days}</span>
+			<div className=" d-flex text-white text-sm gap-12 justify-content-center">
+				<div className=" border p-2 w-20">
+					<div className=" flex flex-col gap-1 items-center">
+						<span className=" text-3xl">{days}</span>
 						<span className="countdown-text">Days</span>
 					</div>
 				</div>
-				<div className="countdown-item border p-2 w-20">
-					<div className="countdown-number flex flex-col gap-1 items-center">
+				<div className=" border p-2 w-20">
+					<div className=" flex flex-col gap-1 items-center">
 						<span className="days text-3xl">{hours}</span>
 						<span className="countdown-text">Hours</span>
 					</div>
@@ -46,8 +43,8 @@ function DateCount() {
 						<span className="countdown-text">Minutes</span>
 					</div>
 				</div>
-				<div className="countdown-item border p-2 w-20">
-					<div className="countdown-number flex flex-col gap-1 items-center">
+				<div className=" border p-2 w-20">
+					<div className=" flex flex-col gap-1 items-center">
 						<span className="days text-3xl">{seconds}</span>
 						<span className="countdown-text">Seconds</span>
 					</div>

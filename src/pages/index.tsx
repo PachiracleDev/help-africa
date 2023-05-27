@@ -10,7 +10,7 @@ import Image from "next/image";
 import Script from "next/script";
 
 export default function Home() {
-	let bool = true;
+	let bool = false;
 	return bool ? (
 		<Layout>
 			<Banner />
