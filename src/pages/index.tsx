@@ -21,7 +21,9 @@ export default function Home() {
 			<OrgsList />
 		</Layout>
 	) : (
-		<CommingSoon />
+		<>
+			<CommingSoon />
+		</>
 	);
 }
 {

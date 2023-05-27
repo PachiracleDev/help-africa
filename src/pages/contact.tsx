@@ -1,9 +1,38 @@
 import BannerPresentation from "@/components/BannerPresentation";
 import Layout from "@/layout";
-import React from "react";
+import { useState } from "react";
 import imagebg from "../../public/assets/images/testimonial-image/testi-bg.jpg";
+import { toast } from "react-toastify";
 
 function ContactPage() {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [subject, setSubject] = useState("");
+	const [message, setMessage] = useState("");
+
+	const handleSubmit = async (e: any) => {
+		e.preventDefault();
+		try {
+			const data = {
+				name,
+				email,
+				subject,
+				message,
+			};
+			const response = await fetch("/api/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+			const resData = await response.json();
+			toast.success(resData.message);
+		} catch (error: any) {
+			toast.error("Something went wrong!");
+		}
+	};
+
 	return (
 		<Layout>
 			<BannerPresentation image={imagebg} title="CONTACT US" />
@@ -90,19 +119,32 @@ function ContactPage() {
 								<form
 									className="contact-form-style"
 									id="contact-form"
-									action="https://htmldemo.net/chariv/chariv/assets/php/chariv-mail.php"
-									method="post"
+									onSubmit={handleSubmit}
 								>
 									<div className="row">
 										<div className="col-lg-6">
-											<input name="name" placeholder="Name*" type="text" />
+											<input
+												value={name}
+												onChange={(e) => setName(e.target.value)}
+												name="name"
+												placeholder="Name*"
+												type="text"
+											/>
 										</div>
 										<div className="col-lg-6">
-											<input name="email" placeholder="Email*" type="email" />
+											<input
+												value={email}
+												onChange={(e) => setEmail(e.target.value)}
+												name="email"
+												placeholder="Email*"
+												type="email"
+											/>
 										</div>
 										<div className="col-lg-12">
 											<input
 												name="subject"
+												value={subject}
+												onChange={(e) => setSubject(e.target.value)}
 												placeholder="Subject*"
 												type="text"
 											/>
@@ -110,6 +152,8 @@ function ContactPage() {
 										<div className="col-lg-12">
 											<textarea
 												name="message"
+												value={message}
+												onChange={(e) => setMessage(e.target.value)}
 												placeholder="Your Message*"
 											></textarea>
 											<button

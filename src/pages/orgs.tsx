@@ -21,7 +21,7 @@ function OrgsPage() {
 						<div className="col-md-6 col-lg-4 mb-md-50px mb-lm-50px mb-50px">
 							<div className="causes-wrapper">
 								<div className="inner-image banner-wrapper">
-									<a href="single-causes.html">
+									<a href="/single-org/ORG1">
 										<Image
 											className="img-responsive w-100"
 											src={imageCause1}
@@ -32,7 +32,7 @@ function OrgsPage() {
 								<div className="causes-content">
 									<h5 className="content-title">
 										{" "}
-										<a className="causes-link" href="single-causes.html">
+										<a className="causes-link" href="/single-org/ORG1">
 											Children to get education
 										</a>
 									</h5>
@@ -52,7 +52,7 @@ function OrgsPage() {
 										data-percent="35%"
 										data-scroll-className="active"
 									>
-										<div className="h-2 bg-redPrimary w-1/3"></div>
+										<div className="h-2 bg-primaryCol w-1/3"></div>
 									</div>
 								</div>
 							</div>
@@ -61,7 +61,7 @@ function OrgsPage() {
 						<div className="col-md-6 col-lg-4 mb-md-50px mb-lm-50px mb-50px">
 							<div className="causes-wrapper">
 								<div className="inner-image banner-wrapper">
-									<a href="single-causes.html">
+									<a href="/single-org/ORG1">
 										<Image
 											className="img-responsive w-100"
 											src={imageCause2}
@@ -71,7 +71,7 @@ function OrgsPage() {
 								</div>
 								<div className="causes-content">
 									<h5 className="content-title">
-										<a className="causes-link" href="single-causes.html">
+										<a className="causes-link" href="/single-org/ORG1">
 											Bring Electric and Light
 										</a>
 									</h5>
@@ -91,7 +91,7 @@ function OrgsPage() {
 										data-percent="80%"
 										data-scroll-className="active"
 									>
-										<div className="h-2 bg-redPrimary w-4/5"></div>
+										<div className="h-2 bg-primaryCol w-4/5"></div>
 									</div>
 								</div>
 							</div>
@@ -100,7 +100,7 @@ function OrgsPage() {
 						<div className="col-md-6 col-lg-4 mb-md-50px mb-lm-50px mb-50px">
 							<div className="causes-wrapper">
 								<div className="inner-image banner-wrapper">
-									<a href="single-causes.html">
+									<a href="/single-org/ORG1">
 										<Image
 											className="img-responsive w-100"
 											src={imageCause3}
@@ -110,7 +110,7 @@ function OrgsPage() {
 								</div>
 								<div className="causes-content">
 									<h5 className="content-title">
-										<a className="causes-link" href="single-causes.html">
+										<a className="causes-link" href="/single-org/ORG1">
 											Water carrier items
 										</a>
 									</h5>
@@ -130,7 +130,7 @@ function OrgsPage() {
 										data-percent="60%"
 										data-scroll-className="active"
 									>
-										<div className="h-2 bg-redPrimary w-3/5"></div>
+										<div className="h-2 bg-primaryCol w-3/5"></div>
 									</div>
 								</div>
 							</div>
@@ -139,7 +139,7 @@ function OrgsPage() {
 						<div className="col-md-6 col-lg-4 mb-md-50px mb-lm-50px mb-50px">
 							<div className="causes-wrapper">
 								<div className="inner-image banner-wrapper">
-									<a href="single-causes.html">
+									<a href="/single-org/ORG1">
 										<Image
 											className="img-responsive w-100"
 											src={imageCause4}
@@ -150,7 +150,7 @@ function OrgsPage() {
 								<div className="causes-content">
 									<h5 className="content-title">
 										{" "}
-										<a className="causes-link" href="single-causes.html">
+										<a className="causes-link" href="/single-org/ORG1">
 											Children to get education
 										</a>
 									</h5>
@@ -170,7 +170,7 @@ function OrgsPage() {
 										data-percent="35%"
 										data-scroll-className="active"
 									>
-										<div className="h-2 bg-redPrimary w-1/3"></div>
+										<div className="h-2 bg-primaryCol w-1/3"></div>
 									</div>
 								</div>
 							</div>
@@ -179,7 +179,7 @@ function OrgsPage() {
 						<div className="col-md-6 col-lg-4 mb-md-50px mb-lm-50px mb-50px">
 							<div className="causes-wrapper">
 								<div className="inner-image banner-wrapper">
-									<a href="single-causes.html">
+									<a href="/single-org/ORG1">
 										<Image
 											className="img-responsive w-100"
 											src={imageCause5}
@@ -189,7 +189,7 @@ function OrgsPage() {
 								</div>
 								<div className="causes-content">
 									<h5 className="content-title">
-										<a className="causes-link" href="single-causes.html">
+										<a className="causes-link" href="/single-org/ORG1">
 											Bring Electric and Light
 										</a>
 									</h5>
@@ -209,7 +209,7 @@ function OrgsPage() {
 										data-percent="80%"
 										data-scroll-className="active"
 									>
-										<div className="h-2 bg-redPrimary w-4/5"></div>
+										<div className="h-2 bg-primaryCol w-4/5"></div>
 									</div>
 								</div>
 							</div>
@@ -218,7 +218,7 @@ function OrgsPage() {
 						<div className="col-md-6 col-lg-4 mb-md-50px mb-lm-50px mb-50px">
 							<div className="causes-wrapper">
 								<div className="inner-image banner-wrapper">
-									<a href="single-causes.html">
+									<a href="/single-org/ORG1">
 										{" "}
 										<Image
 											className="img-responsive w-100"
@@ -229,7 +229,7 @@ function OrgsPage() {
 								</div>
 								<div className="causes-content">
 									<h5 className="content-title">
-										<a className="causes-link" href="single-causes.html">
+										<a className="causes-link" href="/single-org/ORG1">
 											Water carrier items
 										</a>
 									</h5>
@@ -249,7 +249,7 @@ function OrgsPage() {
 										data-percent="60%"
 										data-scroll-className="active"
 									>
-										<div className="h-2 bg-redPrimary w-3/5"></div>
+										<div className="h-2 bg-primaryCol w-3/5"></div>
 									</div>
 								</div>
 							</div>
@@ -258,7 +258,7 @@ function OrgsPage() {
 						<div className="col-md-6 col-lg-4 mb-md-50px mb-lm-50px">
 							<div className="causes-wrapper">
 								<div className="inner-image banner-wrapper">
-									<a href="single-causes.html">
+									<a href="/single-org/ORG1">
 										<Image
 											className="img-responsive w-100"
 											src={imageCause2}
@@ -269,7 +269,7 @@ function OrgsPage() {
 								<div className="causes-content">
 									<h5 className="content-title">
 										{" "}
-										<a className="causes-link" href="single-causes.html">
+										<a className="causes-link" href="/single-org/ORG1">
 											Children to get education
 										</a>
 									</h5>
@@ -289,7 +289,7 @@ function OrgsPage() {
 										data-percent="35%"
 										data-scroll-className="active"
 									>
-										<div className="h-2 bg-redPrimary w-1/3"></div>
+										<div className="h-2 bg-primaryCol w-1/3"></div>
 									</div>
 								</div>
 							</div>
@@ -298,7 +298,7 @@ function OrgsPage() {
 						<div className="col-md-6 col-lg-4 mb-md-50px mb-lm-50px">
 							<div className="causes-wrapper">
 								<div className="inner-image banner-wrapper">
-									<a href="single-causes.html">
+									<a href="/single-org/ORG1">
 										<Image
 											className="img-responsive w-100"
 											src={imageCause3}
@@ -308,7 +308,7 @@ function OrgsPage() {
 								</div>
 								<div className="causes-content">
 									<h5 className="content-title">
-										<a className="causes-link" href="single-causes.html">
+										<a className="causes-link" href="/single-org/ORG1">
 											Bring Electric and Light
 										</a>
 									</h5>
@@ -328,7 +328,7 @@ function OrgsPage() {
 										data-percent="80%"
 										data-scroll-className="active"
 									>
-										<div className="h-2 bg-redPrimary w-4/5"></div>
+										<div className="h-2 bg-primaryCol w-4/5"></div>
 									</div>
 								</div>
 							</div>
@@ -337,7 +337,7 @@ function OrgsPage() {
 						<div className="col-md-6 col-lg-4">
 							<div className="causes-wrapper">
 								<div className="inner-image banner-wrapper">
-									<a href="single-causes.html">
+									<a href="/single-org/ORG1">
 										<Image
 											className="img-responsive w-100"
 											src={imageCause4}
@@ -347,7 +347,7 @@ function OrgsPage() {
 								</div>
 								<div className="causes-content">
 									<h5 className="content-title">
-										<a className="causes-link" href="single-causes.html">
+										<a className="causes-link" href="/single-org/ORG1">
 											Water carrier items
 										</a>
 									</h5>
@@ -367,7 +367,7 @@ function OrgsPage() {
 										data-percent="60%"
 										data-scroll-className="active"
 									>
-										<div className="h-2 bg-redPrimary w-3/5"></div>
+										<div className="h-2 bg-primaryCol w-3/5"></div>
 									</div>
 								</div>
 							</div>

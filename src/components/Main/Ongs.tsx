@@ -58,7 +58,7 @@ function Ongs() {
 											</a>
 										</div>
 										<div className="progress" data-percent="35%">
-											<div className="h-2 bg-redPrimary w-1/3"></div>
+											<div className="h-2 bg-primaryCol w-1/3"></div>
 										</div>
 									</div>
 								</div>
@@ -98,7 +98,7 @@ function Ongs() {
 											</a>
 										</div>
 										<div className="progress" data-percent="80%">
-											<div className="h-2 bg-redPrimary w-4/5"></div>
+											<div className="h-2 bg-primaryCol w-4/5"></div>
 										</div>
 									</div>
 								</div>
@@ -139,7 +139,7 @@ function Ongs() {
 											</a>
 										</div>
 										<div className="progress" data-percent="60%">
-											<div className="h-2 bg-redPrimary w-3/4"></div>
+											<div className="h-2 bg-primaryCol w-3/4"></div>
 										</div>
 									</div>
 								</div>
@@ -180,7 +180,7 @@ function Ongs() {
 											</a>
 										</div>
 										<div className="progress" data-percent="50%">
-											<div className="h-2 bg-redPrimary w-1/2"></div>
+											<div className="h-2 bg-primaryCol w-1/2"></div>
 										</div>
 									</div>
 								</div>
@@ -221,7 +221,7 @@ function Ongs() {
 											</a>
 										</div>
 										<div className="progress" data-percent="50%">
-											<div className="h-2 bg-redPrimary w-1/2"></div>
+											<div className="h-2 bg-primaryCol w-1/2"></div>
 										</div>
 									</div>
 								</div>

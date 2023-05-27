@@ -1,8 +1,30 @@
 import Image from "next/image";
-import React from "react";
+import { useState } from "react";
 import DateCount from "./DateCount";
+import { toast } from "react-toastify";
 
 function CommingSoon() {
+	const [email, setEmail] = useState("");
+
+	const handleSubmit = async (e: any) => {
+		e.preventDefault();
+		try {
+			const rta = await fetch("/api/subscribe", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ email }),
+			});
+			const data = await rta.json();
+
+			toast.success("Thanks for subscribing");
+			setEmail("");
+		} catch (error) {
+			toast.error("Error");
+		}
+	};
+
 	return (
 		<div className="coming_soon_area js-ripples">
 			<div className="container">
@@ -30,18 +52,19 @@ function CommingSoon() {
 									<form
 										id="mc-embedded-subscribe-form"
 										className="validate"
-										target="_blank"
-										name="mc-embedded-subscribe-form"
-										method="post"
-										action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
+										onSubmit={handleSubmit}
 									>
 										<div id="mc_embed_signup_scroll" className="mc-form">
 											<input
 												id="mc-email"
 												type="email"
+												value={email}
+												onChange={(e) => setEmail(e.target.value)}
 												placeholder="Enter your e-mail..."
 											/>
-											<button id="mc-embedded-subscribe">Subscribe</button>
+											<button type="submit" id="mc-embedded-subscribe">
+												Subscribe
+											</button>
 										</div>
 									</form>
 

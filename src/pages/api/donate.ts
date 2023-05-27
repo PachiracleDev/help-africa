@@ -1,43 +1,56 @@
-import nextConnect from "next-connect";
-import { NextApiRequest, NextApiResponse } from "next";
-const handler = nextConnect();
+import * as stripeT from "stripe";
+import { NextResponse } from "next/server";
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+import type { NextApiRequest, NextApiResponse } from "next";
 
-handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
-	const data = req.body;
-	const amountDonate = data.amount;
-	const currency = data.currency;
-	const description = data.description;
+export default async function handler(req: any, res: any) {
+	if (req.method === "POST") {
+		const stripe = new stripeT.Stripe(stripeSecretKey || "", {
+			apiVersion: "2022-11-15",
+		});
 
-	try {
-		const session = await stripe.checkout.sessions.create({
-			payment_method_types: ["card"],
-			line_items: [
-				{
-					price_data: {
-						currency: currency,
-						product_data: {
-							name: description,
+		const body = await req.json();
+
+		const amountDonate = body.amount;
+
+		const currency = body.currency;
+		const description = body.dedication;
+
+		try {
+			const session = await stripe.checkout.sessions.create({
+				payment_method_types: ["card"],
+				line_items: [
+					{
+						price_data: {
+							currency, // Especifica la moneda en la que se realizará la donación
+							product_data: {
+								name: "Donation", // Nombre del producto o descripción de la donación
+								description, // Descripción de la donación o fundación
+							},
+							unit_amount: amountDonate * 100, // Monto de la donación en centavos (en este ejemplo, 5 dólares)
 						},
-						unit_amount: amountDonate,
+						quantity: 1,
 					},
-					quantity: 1,
-				},
-			],
-			mode: "payment",
-			success_url: "http://localhost:3000/success",
-			cancel_url: "http://localhost:3000/",
-		});
+				],
+				mode: "payment",
+				success_url: "http://localhost:3000/success",
+				cancel_url: "http://localhost:3000/",
+			});
 
-		return res.status(200).json({
-			message: "Ready",
-			id: session.id,
-		});
-	} catch (e) {
-		return res.status(400).json({
-			message: "Error",
-		});
+			return NextResponse.json({
+				message: "Success",
+				url: session.url,
+			});
+		} catch (e) {
+			console.log(e);
+		}
+		return;
 	}
-});
-export default handler;
+
+	return NextResponse.next();
+}
+
+export const config = {
+	runtime: "edge",
+};

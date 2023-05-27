@@ -31,7 +31,14 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Component {...pageProps} />
-			<ToastContainer />
+			<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				limit={1}
+				rtl={false}
+				hideProgressBar={false}
+				theme="light"
+			/>
 		</>
 	);
 }

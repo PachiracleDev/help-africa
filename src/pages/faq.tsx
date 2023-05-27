@@ -2,6 +2,7 @@ import BannerPresentation from "@/components/BannerPresentation";
 import Layout from "@/layout";
 import React from "react";
 import imagebg from "../../public/assets/images/testimonial-image/testi-bg.jpg";
+import Desplegable from "@/components/FAQ/Desplegable";
 
 function FaqPage() {
 	return (
@@ -29,133 +30,52 @@ function FaqPage() {
 									</p>
 								</div>
 								<div id="faq" className="panel-group">
-									<div className="panel panel-default single-my-account">
-										<div className="panel-heading my-account-title">
-											<h3 className="panel-title">
-												<span>1 .</span>{" "}
-												<a
-													data-bs-toggle="collapse"
-													href="#my-account-1"
-													className="collapsed"
-													aria-expanded="true"
-												>
-													Mauris congue euismod purus at semper. Morbi et
-													vulputate massa?
-												</a>
-											</h3>
-										</div>
-										<div
-											id="my-account-1"
-											className="panel-collapse collapse show"
-											data-bs-parent="#faq"
-										>
-											<div className="panel-body">
-												Donec mattis finibus elit ut tristique. Nullam tempus
-												nunc eget arcu vulputate, eu porttitor tellus commodo.
-												Aliquam erat volutpat. Aliquam consectetur lorem eu
-												viverra lobortis. Morbi gravida, nisi id fringilla
-												ultricies, elit lorem eleifend lorem
-											</div>
-										</div>
-									</div>
-									<div className="panel panel-default single-my-account">
-										<div className="panel-heading my-account-title">
-											<h3 className="panel-title">
-												<span>2 .</span>{" "}
-												<a
-													data-bs-toggle="collapse"
-													href="#my-account-2"
-													aria-expanded="false"
-													className="collapsed"
-												>
-													Donec mattis finibus elit ut tristique?
-												</a>
-											</h3>
-										</div>
-										<div
-											id="my-account-2"
-											className="panel-collapse collapse"
-											data-bs-parent="#faq"
-										>
-											<div className="panel-body">
-												Donec mattis finibus elit ut tristique. Nullam tempus
-												nunc eget arcu vulputate, eu porttitor tellus commodo.
-												Aliquam erat volutpat. Aliquam consectetur lorem eu
-												viverra lobortis. Morbi gravida, nisi id fringilla
-												ultricies, elit lorem eleifend lorem
-											</div>
-										</div>
-									</div>
-									<div className="panel panel-default single-my-account">
-										<div className="panel-heading my-account-title">
-											<h3 className="panel-title">
-												<span>3 .</span>{" "}
-												<a data-bs-toggle="collapse" href="#my-account-3">
-													Aenean elit orci, efficitur quis nisl at, accumsan?
-												</a>
-											</h3>
-										</div>
-										<div
-											id="my-account-3"
-											className="panel-collapse collapse"
-											data-bs-parent="#faq"
-										>
-											<div className="panel-body">
-												Donec mattis finibus elit ut tristique. Nullam tempus
-												nunc eget arcu vulputate, eu porttitor tellus commodo.
-												Aliquam erat volutpat. Aliquam consectetur lorem eu
-												viverra lobortis. Morbi gravida, nisi id fringilla
-												ultricies, elit lorem eleifend lorem
-											</div>
-										</div>
-									</div>
-									<div className="panel panel-default single-my-account">
-										<div className="panel-heading my-account-title">
-											<h3 className="panel-title">
-												<span>4 .</span>{" "}
-												<a data-bs-toggle="collapse" href="#my-account-4">
-													Pellentesque habitant morbi tristique senectus et
-													netus?
-												</a>
-											</h3>
-										</div>
-										<div
-											id="my-account-4"
-											className="panel-collapse collapse"
-											data-bs-parent="#faq"
-										>
-											<div className="panel-body">
-												Donec mattis finibus elit ut tristique. Nullam tempus
-												nunc eget arcu vulputate, eu porttitor tellus commodo.
-												Aliquam erat volutpat. Aliquam consectetur lorem eu
-												viverra lobortis. Morbi gravida, nisi id fringilla
-												ultricies, elit lorem eleifend lorem
-											</div>
-										</div>
-									</div>
-									<div className="panel panel-default single-my-account">
-										<div className="panel-heading my-account-title">
-											<h3 className="panel-title">
-												<span>5 .</span>{" "}
-												<a data-bs-toggle="collapse" href="#my-account-5">
-													Nam pellentesque aliquam metus?
-												</a>
-											</h3>
-										</div>
-										<div
-											id="my-account-5"
-											className="panel-collapse collapse"
-											data-bs-parent="#faq"
-										>
-											<div className="panel-body">
-												Donec mattis finibus elit ut tristique. Nullam tempus
-												nunc eget arcu vulputate, eu porttitor tellus commodo.
-												Aliquam erat volutpat. Aliquam consectetur lorem eu
-												viverra lobortis. Morbi gravida, nisi id fringilla
-												ultricies, elit lorem eleifend lorem
-											</div>
-										</div>
-									</div>
+									<Desplegable
+										title="Mauris congue euismod purus at semper. Morbi et vulputate massa?"
+										content="Donec mattis finibus elit ut tristique. Nullam tempus
+									 nunc eget arcu vulputate, eu porttitor tellus commodo.
+									 Aliquam erat volutpat. Aliquam consectetur lorem eu
+									 viverra lobortis. Morbi gravida, nisi id fringilla
+									 ultricies, elit lorem eleifend lorem"
+										index={1}
+									/>
+									<Desplegable
+										title="Donec mattis finibus elit ut tristique? "
+										content="	Donec mattis finibus elit ut tristique. Nullam tempus
+									 nunc eget arcu vulputate, eu porttitor tellus commodo.
+									 Aliquam erat volutpat. Aliquam consectetur lorem eu
+									 viverra lobortis. Morbi gravida, nisi id fringilla
+									 ultricies, elit lorem eleifend lorem"
+										index={2}
+									/>
+									<Desplegable
+										content="Donec mattis finibus elit ut tristique. Nullam tempus
+								nunc eget arcu vulputate, eu porttitor tellus commodo.
+								Aliquam erat volutpat. Aliquam consectetur lorem eu
+								viverra lobortis. Morbi gravida, nisi id fringilla
+								ultricies, elit lorem eleifend lorem"
+										index={3}
+										title="Aenean elit orci, efficitur quis nisl at, accumsan?"
+									/>
+									<Desplegable
+										content="Donec mattis finibus elit ut tristique. Nullam tempus
+								nunc eget arcu vulputate, eu porttitor tellus commodo.
+								Aliquam erat volutpat. Aliquam consectetur lorem eu
+								viverra lobortis. Morbi gravida, nisi id fringilla
+								ultricies, elit lorem eleifend lorem"
+										index={4}
+										title="	Pellentesque habitant morbi tristique senectus et
+										netus?"
+									/>
+									<Desplegable
+										content="Donec mattis finibus elit ut tristique. Nullam tempus
+										nunc eget arcu vulputate, eu porttitor tellus commodo.
+										Aliquam erat volutpat. Aliquam consectetur lorem eu
+										viverra lobortis. Morbi gravida, nisi id fringilla
+										ultricies, elit lorem eleifend lorem"
+										index={5}
+										title="Aenean elit orci, efficitur quis nisl at, accumsan?"
+									/>
 								</div>
 							</div>
 						</div>

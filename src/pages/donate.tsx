@@ -1,12 +1,33 @@
 import Layout from "@/layout";
+import { useRouter } from "next/router";
 import React from "react";
+import { toast } from "react-toastify";
 
 function DonatePage() {
 	const [dedication, setDedication] = React.useState("");
 	const [amount, setAmount] = React.useState(0);
 	const [currency, setCurrency] = React.useState("USD");
 
-	const handleSubmit = () => {};
+	const handleSubmit = async () => {
+		if (!amount || !dedication || !currency)
+			return toast.error("Please fill all the fields");
+
+		try {
+			const rta = await fetch("/api/donate", {
+				method: "POST",
+				body: JSON.stringify({
+					dedication,
+					amount,
+					currency,
+				}),
+			});
+			const data = await rta.json();
+
+			window.location.href = data.url;
+		} catch (error) {
+			toast.error("Something went wrong");
+		}
+	};
 
 	return (
 		<Layout>
@@ -45,7 +66,7 @@ function DonatePage() {
 						></textarea>
 						<button
 							onClick={() => handleSubmit()}
-							className="text-white bg-redPrimary px-4 py-2 rounded-md font-bold"
+							className="text-white bg-primaryCol px-4 py-2 rounded-md font-bold"
 						>
 							Donate
 						</button>
