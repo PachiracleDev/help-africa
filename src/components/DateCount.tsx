@@ -23,8 +23,8 @@ function DateCount() {
 	}, [finishDate]);
 
 	return (
-		<div>
-			<div className=" d-flex text-white text-sm gap-12 justify-content-center">
+		<div className="px-3">
+			<div className=" d-flex text-white text-sm gap-2 md:gap-12 justify-content-center">
 				<div className=" border p-2 w-20">
 					<div className=" flex flex-col gap-1 items-center">
 						<span className=" text-3xl">{days}</span>
