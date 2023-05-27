@@ -48,7 +48,7 @@ function Banner() {
 							<h2 className="hero-slider__title text-5xl">{slide.title}</h2>
 							<p className="hero-slider__text">{slide.description}</p>
 							<Link
-								className="bg-red-700 px-4 py-3 font-bold text-center items-center justify-center text-white rounded-md"
+								className="bg-primaryCol px-4 py-3 font-bold text-center items-center justify-center text-white rounded-md"
 								href="/donate"
 							>
 								DONATE NOW

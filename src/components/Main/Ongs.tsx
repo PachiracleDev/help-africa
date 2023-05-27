@@ -7,8 +7,12 @@ import image5 from "../../../public/assets/images/causes-image/5.jpg";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, A11y, Scrollbar } from "swiper";
-
+import { useMediaQuery } from "react-responsive";
 function Ongs() {
+	const isDesktopOrLaptop = useMediaQuery({
+		query: "(min-width: 1224px)",
+	});
+
 	return (
 		<div className="causes-area pt-100px pb-100px">
 			<div className="container">
@@ -25,7 +29,7 @@ function Ongs() {
 						modules={[Navigation, Pagination, Scrollbar, A11y]}
 						spaceBetween={0}
 						grabCursor={true}
-						slidesPerView={3}
+						slidesPerView={isDesktopOrLaptop ? 3 : 1}
 						keyboard={{ enabled: true }}
 						navigation
 						pagination={{ clickable: true }}

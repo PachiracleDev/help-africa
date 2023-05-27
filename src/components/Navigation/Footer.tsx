@@ -1,6 +1,27 @@
-import React from "react";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 function Footer() {
+	const [email, setEmail] = useState("");
+
+	const handleSubmit = async (e: any) => {
+		e.preventDefault();
+		try {
+			const rta = await fetch("/api/subscribe", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ email }),
+			});
+			const data = await rta.json();
+
+			toast.success("Thanks for subscribing");
+			setEmail("");
+		} catch (error) {
+			toast.error("Error");
+		}
+	};
 	return (
 		<div className="footer-area">
 			<div className="footer-container">
@@ -134,15 +155,7 @@ function Footer() {
 										</p>
 
 										<div id="mc_embed_signup" className="subscribe-form">
-											<form
-												id="mc-embedded-subscribe-form"
-												className="validate"
-												noValidate
-												target="_blank"
-												name="mc-embedded-subscribe-form"
-												method="post"
-												action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
-											>
+											<div id="mc-embedded-subscribe-form" className="validate">
 												<div id="mc_embed_signup_scroll" className="mc-form">
 													<input
 														className="email"
@@ -150,7 +163,8 @@ function Footer() {
 														required
 														placeholder="Enter your email here.."
 														name="EMAIL"
-														value=""
+														value={email}
+														onChange={(e) => setEmail(e.target.value)}
 													/>
 													<div className="mc-news" aria-hidden="true">
 														<input
@@ -166,13 +180,13 @@ function Footer() {
 															className="button"
 															type="submit"
 															name="subscribe"
-															value=""
+															onClick={handleSubmit}
 														>
 															<i className="fa fa-envelope"></i>
 														</button>
 													</div>
 												</div>
-											</form>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -199,20 +213,13 @@ function Footer() {
 											href="#"
 										></a>
 									</li>
-									<li className="li">
-										<a
-											className="google fa fa-google-plus"
-											title="Google"
-											href="#"
-										></a>
-									</li>
 								</ul>
 							</div>
 							<div className="col-md-6 text-start">
 								<p className="copy-text">
 									Copyright © 2022{" "}
 									<a className="company-name" href="https://hasthemes.com/">
-										HasThemes
+										Africa Help
 									</a>
 									. All Rights Reserved
 								</p>

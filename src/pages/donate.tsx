@@ -31,7 +31,7 @@ function DonatePage() {
 
 	return (
 		<Layout>
-			<div className="my-24">
+			<div className="my-24 p-3">
 				<div className="max-w-5xl mx-auto">
 					<h2 className="text-3xl text-center ">Enter Your Pledged Donation</h2>
 					<p className="text-gray-500 text-sm text-center">

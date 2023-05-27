@@ -32,7 +32,9 @@ function CommingSoon() {
 					<div className="col-12">
 						<div className="coming_soon_container">
 							<div className="coming_soon_logo text-center">
-								<h1 className="text-5xl text-white font-bold">Help Africa</h1>
+								<h1 className="text-5xl text-white font-bold">
+									Help <span className="text-primaryCol font-bold">Africa</span>
+								</h1>
 							</div>
 
 							<div className="coming_soon_title">

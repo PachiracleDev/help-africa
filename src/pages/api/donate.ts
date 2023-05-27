@@ -2,15 +2,13 @@ import * as stripeT from "stripe";
 import { NextResponse } from "next/server";
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
-import type { NextApiRequest, NextApiResponse } from "next";
-
 export default async function handler(req: any, res: any) {
 	if (req.method === "POST") {
 		const stripe = new stripeT.Stripe(stripeSecretKey || "", {
 			apiVersion: "2022-11-15",
 		});
 
-		const body = await req.json();
+		const body = JSON.parse(req.body);
 
 		const amountDonate = body.amount;
 
@@ -37,8 +35,7 @@ export default async function handler(req: any, res: any) {
 				success_url: "http://localhost:3000/success",
 				cancel_url: "http://localhost:3000/",
 			});
-
-			return NextResponse.json({
+			return res.status(200).json({
 				message: "Success",
 				url: session.url,
 			});
@@ -50,7 +47,3 @@ export default async function handler(req: any, res: any) {
 
 	return NextResponse.next();
 }
-
-export const config = {
-	runtime: "edge",
-};

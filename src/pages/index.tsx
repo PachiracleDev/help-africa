@@ -10,8 +10,7 @@ import Image from "next/image";
 import Script from "next/script";
 
 export default function Home() {
-	let bool = false;
-	return bool ? (
+	return (
 		<Layout>
 			<Banner />
 			<Ongs />
@@ -20,11 +19,5 @@ export default function Home() {
 			<BannerTwo />
 			<OrgsList />
 		</Layout>
-	) : (
-		<>
-			<CommingSoon />
-		</>
 	);
-}
-{
 }

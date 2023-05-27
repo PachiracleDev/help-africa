@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-button-next::after {
+	font-size: 2rem !important;
+	color: #8cae00;
+}
+.swiper-button-prev::after {
+	font-size: 2rem !important;
+	color: #8cae00;
+}
+
+@layer components {
+	.Overlay {
+		@apply fixed inset-0 w-full h-full z-50 bg-black bg-opacity-50 opacity-0 transition-opacity pointer-events-none cursor-pointer;
+	}
+	.OverlayActivate {
+		@apply opacity-100 pointer-events-auto;
+	}
+	.ModalMenu {
+		@apply flex flex-col bg-primary-content text-white px-4 py-2 items-start z-[9000000] fixed w-[65%] h-full top-0 right-0 transition-all ease-out duration-500 translate-x-[105%] lg:bg-none lg:shadow-none lg:z-auto lg:flex-shrink-0 lg:sticky lg:w-0 lg:h-screen lg:top-[15rem] lg:right-auto lg:overflow-y-hidden lg:transform-none lg:opacity-0 lg:hidden;
+	}
+	.ModalMenuActivate {
+		@apply translate-x-0 lg:transform-none;
+	}
+}
