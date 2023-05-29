@@ -1,12 +1,13 @@
 import BannerPresentation from "@/components/BannerPresentation";
 import Layout from "@/layout";
 import React from "react";
-import imagebg from "../../../public/assets/images/testimonial-image/testi-bg.jpg";
+import imagebg from "../../../public/images/HEAD.png";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import image1 from "../../../public/assets/images/causes-image/causes-single-1.jpg";
 import image2 from "../../../public/assets/images/causes-image/causes-single-2.png";
 import { toast } from "react-toastify";
+import Spinner from "react-loading";
 
 function SingleOne() {
 	const router = useRouter();
@@ -15,6 +16,7 @@ function SingleOne() {
 	const [amount, setAmount] = React.useState(0);
 	const [dedication, setDedication] = React.useState("");
 	const [currency, setCurrency] = React.useState("");
+	const [loading, setLoading] = React.useState(false);
 
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
@@ -24,6 +26,7 @@ function SingleOne() {
 			return toast.error("Please fill all the fields");
 
 		try {
+			setLoading(true);
 			const rta = await fetch("/api/donate", {
 				method: "POST",
 				headers: {
@@ -33,9 +36,11 @@ function SingleOne() {
 			});
 			const data = await rta.json();
 
+			setLoading(false);
 			window.location.href = data.url;
 		} catch (error) {
-			console.log(error);
+			setLoading(false);
+			toast.error("Something went wrong");
 		}
 	};
 
@@ -217,9 +222,20 @@ function SingleOne() {
 												<div className="form_btn">
 													<button
 														onClick={handleSubmit}
-														className="btn btn-primary btn-hover-dark w-auto"
+														disabled={loading}
+														className="btn btn-primary w-full items-center justify-center"
 													>
-														Donate now
+														{loading ? (
+															<Spinner
+																height={20}
+																width={20}
+																color="#fff"
+																type="spin"
+																className="mx-auto"
+															/>
+														) : (
+															"Donate now"
+														)}
 													</button>
 												</div>
 											</div>

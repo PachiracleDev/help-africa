@@ -1,7 +1,7 @@
 import BannerPresentation from "@/components/BannerPresentation";
 import Layout from "@/layout";
 import { useState } from "react";
-import imagebg from "../../public/assets/images/testimonial-image/testi-bg.jpg";
+import imagebg from "../../public/images/HEAD.png";
 import { toast } from "react-toastify";
 
 function ContactPage() {

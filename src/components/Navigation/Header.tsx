@@ -3,6 +3,8 @@ import Link from "next/link";
 import { HiBars3BottomRight, HiXMark } from "react-icons/hi2";
 import classNames from "classnames";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
+import logo from "../../../public/images/logo.png";
+import Image from "next/image";
 
 function Header() {
 	const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -55,14 +57,13 @@ function Header() {
 						</div>
 					</div>
 				</div>
-				<div className="header-menu sticky-nav bg-white d-lg-block d-none ptb-10px">
+				<div className="header-menu sticky top-0 z-50 bg-white d-lg-block d-none ptb-10px">
 					<div className="container">
 						<div className="row">
 							<div className="col-md-3 d-flex">
 								<div className="logo align-self-center">
 									<Link href="/" className="text-lg text-stone-700 font-medium">
-										Africa{" "}
-										<span className="text-primaryCol font-bold">Help</span>
+										<Image src={logo} alt="Logo" width={100} height={50} />
 									</Link>
 								</div>
 							</div>
@@ -103,10 +104,10 @@ function Header() {
 				</div>
 			</header>
 
-			<div className="mobile-header d-lg-none sticky-nav bg-white border-b ptb-10px">
+			<div className="mobile-header d-lg-none sticky top-0 z-50 bg-white border-b ptb-10px">
 				<div className="w-full justify-between flex px-4  items-center">
 					<Link href="/" className="text-lg text-stone-700 font-medium">
-						Africa <span className="text-primaryCol font-bold">Help</span>
+						<Image src={logo} alt="Logo" width={100} height={40} />
 					</Link>
 					<div className="flex items-center gap-2">
 						<HiBars3BottomRight

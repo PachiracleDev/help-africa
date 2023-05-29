@@ -25,3 +25,7 @@
 		@apply translate-x-0 lg:transform-none;
 	}
 }
+
+.swiper-pagination-bullet .swiper-pagination-bullet-active {
+	background-color: #8cae00 !important;
+}

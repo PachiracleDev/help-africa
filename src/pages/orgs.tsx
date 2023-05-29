@@ -1,7 +1,7 @@
 import BannerPresentation from "@/components/BannerPresentation";
 import Layout from "@/layout";
 import React from "react";
-import imagebg from "../../public/assets/images/testimonial-image/testi-bg.jpg";
+import imagebg from "../../public/images/HEAD.png";
 
 import imageCause1 from "../../public/assets/images/causes-image/1.jpg";
 import imageCause2 from "../../public/assets/images/causes-image/2.jpg";

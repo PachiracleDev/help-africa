@@ -2,17 +2,20 @@ import Layout from "@/layout";
 import { useRouter } from "next/router";
 import React from "react";
 import { toast } from "react-toastify";
+import Spinner from "react-loading";
 
 function DonatePage() {
 	const [dedication, setDedication] = React.useState("");
 	const [amount, setAmount] = React.useState(0);
 	const [currency, setCurrency] = React.useState("USD");
+	const [loading, setLoading] = React.useState(false);
 
 	const handleSubmit = async () => {
 		if (!amount || !dedication || !currency)
 			return toast.error("Please fill all the fields");
 
 		try {
+			setLoading(true);
 			const rta = await fetch("/api/donate", {
 				method: "POST",
 				body: JSON.stringify({
@@ -22,9 +25,11 @@ function DonatePage() {
 				}),
 			});
 			const data = await rta.json();
+			setLoading(false);
 
 			window.location.href = data.url;
 		} catch (error) {
+			setLoading(false);
 			toast.error("Something went wrong");
 		}
 	};
@@ -66,9 +71,14 @@ function DonatePage() {
 						></textarea>
 						<button
 							onClick={() => handleSubmit()}
-							className="text-white bg-primaryCol px-4 py-2 rounded-md font-bold"
+							disabled={loading}
+							className="text-white justify-center items-center flex bg-primaryCol px-4 py-2 rounded-md font-bold"
 						>
-							Donate
+							{loading ? (
+								<Spinner type="spin" height={20} width={20} color="#fff" />
+							) : (
+								"Donate"
+							)}
 						</button>
 					</div>
 				</div>
