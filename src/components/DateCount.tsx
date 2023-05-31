@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function DateCount() {
-	const finishDate = new Date("May 28, 2023 16:00:00").getTime();
+	const finishDate = new Date("Jun 1, 2023 16:00:00").getTime();
 
 	const [days, setDays] = useState(0);
 	const [hours, setHours] = useState(0);
