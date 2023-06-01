@@ -37,93 +37,30 @@ function Footer() {
 									</p>
 									<div className="need_help">
 										<h5 className="contact-heading">CONTACT US</h5>
-										<p className="phone">
-											<span className="call">Phone : </span>{" "}
-											<a className="contact-link" href="tel:1234-5678">
-												{" "}
-												+(00) 1234-5678
-											</a>
-										</p>
+
 										<p className="phone">
 											<span className="call">Email :</span>{" "}
 											<a
 												className="contact-link"
 												href="mailto:demo@hashemes.com"
 											>
-												demo@hashemes.com
+												hello@helpafrica.click
 											</a>
 										</p>
 										<p className="add">
-											<span className="address">Address :</span> 122, New road,
-											South Zone Country.
+											<span className="address">Address :</span> C/Del Mar, 4 ·
+											11406 Spain
 										</p>
-									</div>
-								</div>
-							</div>
-
-							<div className="col-md-6 col-sm-6 col-lg-2 mb-md-30px mb-lm-30px offset-lg-1">
-								<div className="single-wedge">
-									<h4 className="footer-herading">OUR PROJECT</h4>
-									<div className="footer-links">
-										<div className="footer-row">
-											<ul className="align-items-center">
-												<li className="li">
-													<a className="single-link" href="#">
-														Water Surve
-													</a>
-												</li>
-												<li className="li">
-													<a className="single-link" href="#">
-														Education for all
-													</a>
-												</li>
-												<li className="li">
-													<a className="single-link" href="#">
-														Treatment
-													</a>
-												</li>
-												<li className="li">
-													<a className="single-link" href="#">
-														Food Serving
-													</a>
-												</li>
-												<li className="li">
-													<a className="single-link" href="#">
-														Cloth
-													</a>
-												</li>
-												<li className="li">
-													<a className="single-link" href="#">
-														Selter Project
-													</a>
-												</li>
-											</ul>
-										</div>
 									</div>
 								</div>
 							</div>
 
 							<div className="col-md-6 col-lg-2 col-sm-6 mb-md-30px mb-lm-30px offset-lg-1">
 								<div className="single-wedge">
-									<h4 className="footer-herading">QUCIK LINK</h4>
+									<h4 className="footer-herading">LEGAL</h4>
 									<div className="footer-links">
 										<div className="footer-row">
 											<ul className="align-items-center">
-												<li className="li">
-													<a className="single-link" href="single-causes.html">
-														Causes
-													</a>
-												</li>
-												<li className="li">
-													<a className="single-link" href="#">
-														Projects
-													</a>
-												</li>
-												<li className="li">
-													<a className="single-link" href="gallery.html">
-														Gallery
-													</a>
-												</li>
 												<li className="li">
 													<a className="single-link" href="#">
 														Terms of use
@@ -201,8 +138,8 @@ function Footer() {
 								<ul className="link-follow">
 									<li className="li">
 										<a
-											className="facebook fa fa-facebook"
-											title="Facebook"
+											className="linkedin fa fa-linkedin"
+											title="Linkedin"
 											href="#"
 										></a>
 									</li>

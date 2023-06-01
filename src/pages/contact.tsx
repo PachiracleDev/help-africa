@@ -44,29 +44,16 @@ function ContactPage() {
 								<h2 className="title" data-aos="fade-up" data-aos-delay="200">
 									Contact Info
 								</h2>
-								<div className="single-contact-info">
-									<div className="contact-info-inner">
-										<span className="sub-title">Phone:</span>
-									</div>
-									<div className="contact-info-dec">
-										<p>
-											<a href="tel:+012345678102">+012 345 678 102</a>
-										</p>
-										<p>
-											<a href="tel:+012345678102">+012 345 678 102</a>
-										</p>
-									</div>
-								</div>
+
 								<div className="single-contact-info">
 									<div className="contact-info-inner">
 										<span className="sub-title">Email:</span>
 									</div>
 									<div className="contact-info-dec">
 										<p>
-											<a href="mailto://urname@email.com">urname@email.com</a>
-										</p>
-										<p>
-											<a href="mailto://urwebsitenaem.com">urwebsitenaem.com</a>
+											<a href="mailto://urname@email.com">
+												hello@helpafrica.click
+											</a>
 										</p>
 									</div>
 								</div>
@@ -75,8 +62,7 @@ function ContactPage() {
 										<span className="sub-title">Address:</span>
 									</div>
 									<div className="contact-info-dec">
-										<p>Address goes here,</p>
-										<p>street, Crossroad 123.</p>
+										<p>C/Del Mar, 4 · 11406 Spain</p>
 									</div>
 								</div>
 								<div className="contact-social">

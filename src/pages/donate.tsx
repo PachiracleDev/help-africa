@@ -50,12 +50,12 @@ function DonatePage() {
 							value={amount}
 							onChange={(e) => setAmount(parseInt(e.target.value))}
 							placeholder="Enter your pledged donation"
-							className="input input-bordered border mt-4 input-primary w-full"
+							className="bg-gray-50 border mt-4  w-full"
 						/>
 						<select
 							onChange={(e) => setCurrency(e.target.value)}
 							value={currency}
-							className="select border  w-full text-gray-600"
+							className="bg-gray-50 border  w-full text-gray-600"
 						>
 							<option disabled selected>
 								Currency
@@ -64,7 +64,7 @@ function DonatePage() {
 							<option value="EUR">EUR</option>
 						</select>
 						<textarea
-							className="textarea h-40 border resize-none"
+							className=" h-40 border bg-gray-50 resize-none"
 							placeholder="Dedication"
 							value={dedication}
 							onChange={(e) => setDedication(e.target.value)}

@@ -16,7 +16,7 @@ export default function Home() {
 			<Ongs />
 			<HowCanYou />
 			<Gallery />
-			<BannerTwo />
+			{/* <BannerTwo /> */}
 			<OrgsList />
 		</Layout>
 	);

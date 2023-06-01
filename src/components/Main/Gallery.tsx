@@ -16,7 +16,7 @@ function Gallery() {
 				<div className="row">
 					<div className="col-md-12 text-center">
 						<div className="section-title">
-							<h2 className="title">Our Gallery</h2>
+							<h2 className="title">Some ONGS</h2>
 							<p>
 								We create events aiming to pear to the voice for children and
 								gather for support. Please update with our events and confirm

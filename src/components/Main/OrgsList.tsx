@@ -18,7 +18,7 @@ function OrgsList() {
 				<div className="row">
 					<div className="col-md-12">
 						<div className="section-title text-center">
-							<h2 className="title">Organizations We Work With</h2>
+							<h2 className="title">OUR ONGS</h2>
 						</div>
 					</div>
 				</div>

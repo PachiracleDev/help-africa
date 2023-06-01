@@ -90,7 +90,6 @@ function AboutPage() {
 			</div>
 
 			<FinishedProjects />
-			<OrgsList />
 		</Layout>
 	);
 }

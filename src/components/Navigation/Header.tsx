@@ -21,12 +21,11 @@ function Header() {
 						<div className="row">
 							<div className="col-md-5 col-lg-5 col-xl-6 align-self-center justify-content-center">
 								<div className="follow d-flex">
-									<label>Follow Us:</label>
 									<ul className="link-follow">
 										<li>
 											<a
-												className="facebook fa fa-facebook"
-												title="Facebook"
+												className="linkedin fa fa-linkedin"
+												title="Linkedin"
 												href="#"
 											></a>
 										</li>
@@ -47,7 +46,7 @@ function Header() {
 											<li>
 												<a href="mailto:ourmail@domain.com">
 													<i className="fa fa-envelope" aria-hidden="true"></i>{" "}
-													Email: yourmail@domain.com
+													Email: hello@helpafrica.click
 												</a>
 											</li>
 										</ul>
@@ -77,7 +76,7 @@ function Header() {
 											<Link href="/about">About</Link>
 										</li>
 										<li className="menu-dropdown">
-											<Link href="/orgs">ONGS</Link>
+											<Link href="/orgs">ONG</Link>
 										</li>
 
 										<li className="menu-dropdown">
